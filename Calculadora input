@@ -1,0 +1,37 @@
+def calculadora (opcao,num1,num2):
+
+  if opcao == 1 :
+    resultado = num1 +num2
+  elif opcao == 2 :
+    resultado = num1 - num2
+  elif opcao == 3 :
+    resultado = num1 * num2
+  elif opcao == 4 :
+    resultado = num1 / num2
+  elif opcao == 0:
+    resultado = opcao
+
+  return resultado
+outraOpcao = 5
+
+while outraOpcao != 0 :
+  print ('''Escolha a opção: 
+    1 - Soma, 
+    2 - subtração, 
+    3 - Multiplição, 
+    4 - Divisão, 
+    0- sair''')
+  opcao = int(input("Digite o numero correspondete a operação: "))
+  if opcao == 0 :
+    outraOpcao = opcao
+    print("Obrigado!")
+  elif opcao >= 5 :
+    outraOpcao = opcao
+    print ("Essa opção não existe, Selecione uma opção valida!")
+  else :
+    num1 = float(input("Digite o primeiro valor: "))
+    num2 = float(input("Digite o segundo valor: "))
+    
+    calculo = calculadora(opcao,num1,num2)  
+
+    print("Valor calulado: "+ str(calculo))
