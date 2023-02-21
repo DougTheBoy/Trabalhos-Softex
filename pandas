@@ -1,0 +1,13 @@
+import pandas as pd
+
+df = pd.read_csv('aluno_notas.csv')
+print (df)
+print("\n")
+media = (df['nota_1']+ df['nota_2'])/2
+faltas = df['faltas']
+df.loc[:,'media'] = (media)
+
+df.loc[(df['media']>=7) & (df['faltas']<=5),"situacao"]  = "Aprovado"
+df.loc[(df['media']<7) | (df['faltas']>5) ,"situacao"] = "reprovado"
+
+print (df)
