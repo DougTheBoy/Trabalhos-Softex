@@ -1,0 +1,13 @@
+valor = False
+
+while valor == False :
+  nome = input ("Qual seu nome completo? ")
+  try:
+    print("Digite um ano de nascimento entre 1922 e 2021.")
+    anoNasc = int(input("Ano de Nascimento: "))
+    if anoNasc >= 1922 and anoNasc <= 2021 :
+      idade = 2022-anoNasc
+      print(nome," a sua idade é: ",idade)
+      valor = True
+  except Exception as erro:    
+    print("Erro, valor incorreto")
