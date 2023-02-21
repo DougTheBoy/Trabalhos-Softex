@@ -1,0 +1,23 @@
+def calculadora(operacao,valor1,valor2):
+    if operacao == 1:
+        resultado = valor1 + valor2
+        return resultado
+    elif operacao == 2:
+        resultado = valor1 - valor2
+        return resultado
+    elif operacao == 2:
+        resultado = valor1 * valor2
+        return resultado
+    elif operacao == 4:
+        resultado = valor1 / valor2
+        return resultado
+    else:
+        resultado = 0
+        return resultado
+print ('''Escolha a opção: 
+1 - Soma, 
+2 - subtração, 
+3 - Multiplição, 
+4 - Divisão''')
+calculo = calculadora(int(input("Digite o numero correspondete a operação: ")),float(input("Digite o primeiro valor: ")),float(input("Digite o segundo valor: ")))  
+print("Valor calculado: "+ str(calculo))
