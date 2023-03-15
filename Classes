@@ -1,0 +1,46 @@
+class Carro:
+    total_quilometragem = 0
+
+    def __init__(self, modelo, ano, quilometragem):
+        self.modelo = modelo
+        self.ano = ano
+        self.quilometragem = quilometragem
+
+    def info_carro(self):
+        print(f"Modelo: {self.modelo}")
+        print(f"Ano: {self.ano}")
+        print(f"Quilometragem: {self.quilometragem}")
+
+    def aumenta_quilometragem(self, km):
+        self.quilometragem += km
+        Carro.total_quilometragem += km
+
+    @classmethod
+    def info_frota(cls):
+        print(f"Total de quilometragem da frota: {cls.total_quilometragem}")
+
+carro1 = Carro("Fusca", 1975, 50000)
+carro2 = Carro("Corolla", 2021, 2000)
+carro3 = Carro("Gol", 2005, 100000)
+
+carro1.info_carro()
+# Modelo: Fusca
+# Ano: 1975
+# Quilometragem: 50000
+
+carro2.info_carro()
+# Modelo: Corolla
+# Ano: 2021
+# Quilometragem: 2000
+
+carro3.info_carro()
+# Modelo: Gol
+# Ano: 2005
+# Quilometragem: 100000
+
+carro1.aumenta_quilometragem(200)
+carro2.aumenta_quilometragem(500)
+carro3.aumenta_quilometragem(1000)
+
+Carro.info_frota()
+# Total de quilometragem da frota: 1600
