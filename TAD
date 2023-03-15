@@ -1,0 +1,47 @@
+class NumeroComplexo:
+    def __init__(self, real, img):
+        self.real = real
+        self.img = img
+
+    def __str__(self):
+        return f"{self.real} + {self.img}i"
+
+    def __add__(self, outro):
+        return NumeroComplexo(self.real + outro.real, self.img + outro.img)
+
+    def __sub__(self, outro):
+        return NumeroComplexo(self.real - outro.real, self.img - outro.img)
+
+    def __mul__(self, outro):
+        return NumeroComplexo(self.real * outro.real - self.img * outro.img,
+                              self.real * outro.img + self.img * outro.real)
+
+    def __truediv__(self, outro):
+        divisor = outro.real ** 2 + outro.img ** 2
+        return NumeroComplexo((self.real * outro.real + self.img * outro.img) / divisor,
+                              (self.img * outro.real - self.real * outro.img) / divisor)
+
+    def modulo(self):
+        return (self.real ** 2 + self.img ** 2) ** 0.5
+
+    def conjugado(self):
+        return NumeroComplexo(self.real, -self.img)
+
+a = NumeroComplexo(1, 2)
+b = NumeroComplexo(3, 4)
+c = NumeroComplexo(-2, 1)
+
+print("a =", a)
+print("b =", b)
+print("c =", c)
+
+print("a + b =", a + b)
+print("a - b =", a - b)
+print("a * b =", a * b)
+print("a / b =", a / b)
+
+print("|a| =", a.modulo())
+print("conjugado de a =", a.conjugado())
+
+print("real de c =", c.real)
+print("img de c =", c.img)
