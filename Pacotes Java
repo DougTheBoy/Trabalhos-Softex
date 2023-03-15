@@ -1,0 +1,39 @@
+pacote 1:
+package rh;
+
+public class Funcionario {
+    private String nome;
+    private String cpf;
+    private double salario;
+    
+    // getters e setters
+}
+
+package rh;
+
+public class Departamento {
+    private String nome;
+    private String sigla;
+    
+    // getters e setters
+}
+
+Pacote 2
+
+package financeiro;
+
+public class Conta {
+    private int numero;
+    private double saldo;
+    
+    // getters e setters
+}
+
+package financeiro;
+
+public class Fatura {
+    private int numero;
+    private double valor;
+    
+    // getters e setters
+}
