@@ -1,0 +1,60 @@
+Arvore Lista 1:
+          45
+         /  \
+        20   60
+       /  \    \
+      7   30   81
+         /     / \
+        8     97 100
+       /
+      4
+Adcionando valor 50 na lista 1:
+          45
+         /  \
+        20   60
+       /  \    \
+      7   30   81
+         /     / \
+        8     50 100
+       /
+      4
+Removendo valor 81 da lista 1:
+          45
+         /  \
+        20   60
+       /  \    \
+      7   30   97
+         /       \
+        8        100
+       /
+      4
+
+Árvore da lista 2:
+          15
+         /  \
+        6    18
+       / \   / \
+      3   7 16 20
+             /
+            4
+Adicionando o valor 10 na lista 2:
+          15
+         /  \
+        6    18
+       / \   / \
+      3   7 16 20
+     /   
+    4    
+   /
+  10
+Removendo o valor 7 da lista 2:
+          15
+         /  \
+        6    18
+       /    / \
+      3    16 20
+     /   
+    4    
+   /
+  10
+
