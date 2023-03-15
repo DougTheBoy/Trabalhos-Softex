@@ -1,0 +1,65 @@
+1 Carro
+
+Atributos:
+
+Cor
+Modelo
+Ano
+Velocidade Máxima
+Número de Portas
+
+Métodos:
+
+Acelerar()
+Frear()
+Trocar de Marcha()
+
+2 Geladeira
+
+Atributos:
+
+Capacidade
+Marca
+Consumo de Energia
+Número de Portas
+Temperatura Mínima
+
+Métodos:
+
+Ajustar Temperatura()
+Abrir Porta()
+Descongelar()
+
+Objetos abstratos:
+
+1 Conta Bancária
+
+Atributos:
+
+Número da Conta
+Saldo
+Nome do Titular
+Limite de Crédito
+Agência
+
+Métodos:
+
+Depositar()
+Sacar()
+Transferir()
+
+2 Sistema Operacional
+
+Atributos:
+
+Nome
+Versão
+Data de Lançamento
+Requisitos de Sistema
+Licença
+
+Métodos:
+
+Iniciar()
+Desligar()
+Instalar Programa()
