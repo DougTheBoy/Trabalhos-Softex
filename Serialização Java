@@ -1,0 +1,55 @@
+import java.io.*;
+
+public class Endereco implements Serializable {
+    private String rua;
+    private int numero;
+    private String complemento;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String cep;
+
+    public Endereco(String rua, int numero, String complemento, String bairro, String cidade, String estado, String cep) {
+        this.rua = rua;
+        this.numero = numero;
+        this.complemento = complemento;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
+    }
+
+    public String toString() {
+        return rua + ", " + numero + " - " + complemento + ", " + bairro + ", " + cidade + ", " + estado + " - " + cep;
+    }
+
+    public static void main(String[] args) {
+        Endereco endereco = new Endereco("Rua Fictícia", 123, "Apt 456", "Bairro X", "Cidade Y", "Estado Z", "12345-678");
+
+        // Serialização do objeto em um arquivo
+        try {
+            FileOutputStream fileOut = new FileOutputStream("endereco.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(endereco);
+            out.close();
+            fileOut.close();
+            System.out.println("Objeto serializado e salvo em endereco.ser");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Desserialização do objeto a partir do arquivo
+        try {
+            FileInputStream fileIn = new FileInputStream("endereco.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            Endereco enderecoDesserializado = (Endereco) in.readObject();
+            in.close();
+            fileIn.close();
+            System.out.println("Objeto desserializado: " + enderecoDesserializado);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
