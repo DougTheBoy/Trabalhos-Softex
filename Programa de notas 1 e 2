@@ -1,0 +1,28 @@
+Programa de Notas 1
+// Recebe as notas do aluno
+let nota1 = parseFloat(prompt("Digite a nota 1:"));
+let nota2 = parseFloat(prompt("Digite a nota 2:"));
+let nota3 = parseFloat(prompt("Digite a nota 3:"));
+
+// Calcula a média das notas
+let media = (nota1 + nota2 + nota3) / 3;
+
+// Verifica se a média é maior ou igual a 6, com operador ternário
+let resultado = media >= 6 ? "Aprovado" : "Reprovado";
+
+// Imprime o resultado
+console.log(resultado);
+
+Programa de notas 2
+// Recebe as notas do aluno
+let nota1 = parseFloat(prompt("Digite a nota 1:"));
+let nota2 = parseFloat(prompt("Digite a nota 2:"));
+
+// Calcula a média das duas notas
+let media = (nota1 + nota2) / 2;
+
+// Calcula a nota mínima necessária para passar com nota sete
+let notaMinima = (7 - media) * 2;
+
+// Imprime o resultado 
+console.log(`Você precisa tirar no mínimo ${notaMinima.toFixed(2)} na próxima prova para passar com nota sete.`);
