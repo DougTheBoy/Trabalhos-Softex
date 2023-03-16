@@ -1,0 +1,29 @@
+função "capitalize_word
+def capitalize_word(string):
+    return string.capitalize()
+string = "exemplo de string"
+capitalized_string = capitalize_word(string)
+print(capitalized_string)
+# Saída: "Exemplo de string"
+
+função "count_vowels"
+def count_vowels(string):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for letter in string:
+        if letter in vowels:
+            count += 1
+    return count
+string = "exemplo de string"
+vowel_count = count_vowels(string)
+print(vowel_count)
+# Saída: 5
+
+função "reverse_string"
+def reverse_string(string):
+    return string[::-1]
+string = "exemplo de string"
+reversed_string = reverse_string(string)
+print(reversed_string)
+# Saída: "gnirts ed olpmexe"
+
