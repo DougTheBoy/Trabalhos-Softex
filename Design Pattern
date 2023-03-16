@@ -1,0 +1,8 @@
+Creational patterns:
+Um padrão de projeto creational é aquele que aborda a criação de objetos e classes. Ele visa fornecer maneiras flexíveis para criar objetos de forma apropriada para a situação em que se encontram. Um exemplo de padrão creational é o Singleton, que garante que uma classe possa ter apenas uma instância, permitindo que todos os objetos compartilhem um estado comum. Ele é útil quando há a necessidade de limitar a instância de uma classe a apenas um objeto, como por exemplo, uma conexão com banco de dados.
+
+Structural patterns:
+Um padrão de projeto structural é aquele que aborda a organização de classes e objetos. Ele visa fornecer maneiras de compor objetos para formar estruturas maiores e mais complexas. Um exemplo de padrão structural é o Adapter, que permite a comunicação entre duas classes que não possuem interfaces compatíveis. Ele é útil quando precisamos adaptar uma classe existente para ser usada em um contexto diferente.
+
+Behavioural patterns:
+Um padrão de projeto behavioural é aquele que aborda a comunicação entre objetos e classes e a distribuição de responsabilidades entre elas. Ele visa fornecer maneiras de organizar a interação entre objetos e definir comportamentos e responsabilidades de cada um deles. Um exemplo de padrão behavioural é o Observer, que permite que um objeto (observado) notifique outros objetos (observadores) quando ocorrer uma mudança em seu estado interno. Ele é útil quando precisamos manter objetos atualizados sobre as mudanças em outro objeto, sem que eles precisem estar acoplados diretamente a ele.
