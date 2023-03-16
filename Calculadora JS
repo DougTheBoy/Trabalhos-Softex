@@ -1,0 +1,26 @@
+// Recebe dois valores e o operador do usuário
+let valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+let valor2 = parseFloat(prompt("Digite o segundo valor:"));
+let operador = prompt("Digite o operador (+, -, *, /):");
+
+// Executa a operação com base no operador recebido
+let resultado;
+if (operador === "+") {
+  resultado = valor1 + valor2;
+} else if (operador === "-") {
+  resultado = valor1 - valor2;
+} else if (operador === "*") {
+  resultado = valor1 * valor2;
+} else if (operador === "/") {
+  resultado = Math.floor(valor1 / valor2);
+  let sobra = valor1 % valor2;
+  console.log(`Resultado: ${resultado}\nSobra: ${sobra}`);
+  // Retorna tanto o resultado quanto a sobra
+  return;
+} else {
+  console.log("Operador inválido.");
+  return;
+}
+
+// Imprime o resultado da operação
+console.log(`Resultado: ${resultado}`);
