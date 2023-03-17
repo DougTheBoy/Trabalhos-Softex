@@ -1,0 +1,31 @@
+let Banco = {
+  conta: "1234-5",
+  saldo: 1000,
+  tipoConta: "corrente",
+  agencia: "1234",
+  buscarSaldo: function() {
+    return this.saldo;
+  },
+  deposito: function(valor) {
+    this.saldo += valor;
+  },
+  saque: function(valor) {
+    if (this.saldo < valor) {
+      console.log("Saldo insuficiente.");
+    } else {
+      this.saldo -= valor;
+    }
+  },
+  numeroConta: function() {
+    return this.conta;
+  }
+};
+
+// Exemplo de uso
+console.log(Banco.buscarSaldo()); // imprime 1000
+Banco.deposito(500);
+console.log(Banco.buscarSaldo()); // imprime 1500
+Banco.saque(2000); // imprime "Saldo insuficiente."
+Banco.saque(500);
+console.log(Banco.buscarSaldo()); // imprime 1000
+console.log(Banco.numeroConta()); // imprime "1234-5"
