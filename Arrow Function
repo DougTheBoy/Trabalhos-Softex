@@ -1,0 +1,24 @@
+// Função tradicional sem parâmetros
+function imprimirMensagem() {
+  console.log("Bem-vindo à calculadora!");
+}
+
+// Função tradicional com parâmetros e retorno de valor
+function somar(a, b) {
+  return a + b;
+}
+
+// Arrow function com parâmetros e retorno de valor
+const subtrair = (a, b) => a - b;
+
+// Programa de calculadora utilizando as três funções
+imprimirMensagem(); // Imprime "Bem-vindo à calculadora!"
+
+const num1 = 10;
+const num2 = 5;
+
+const resultadoSoma = somar(num1, num2); // resultadoSoma = 15
+console.log(`A soma de ${num1} e ${num2} é ${resultadoSoma}`);
+
+const resultadoSubtracao = subtrair(num1, num2); // resultadoSubtracao = 5
+console.log(`A subtração de ${num1} por ${num2} é ${resultadoSubtracao}`);
