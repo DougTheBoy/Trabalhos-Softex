@@ -1,0 +1,27 @@
+// Definindo um objeto com três propriedades
+const pessoa = {
+  nome: 'João',
+  idade: 30,
+  profissao: 'Engenheiro'
+};
+
+// Definindo um array com três elementos
+const frutas = ['Maçã', 'Banana', 'Laranja'];
+
+// Função para listar as propriedades do objeto
+function listarPropriedades(objeto) {
+  for (const propriedade in objeto) {
+    console.log(propriedade);
+  }
+}
+
+// Função para listar os elementos do array
+function listarElementos(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+
+// Testando as funções
+listarPropriedades(pessoa); // Saída esperada: nome idade profissao
+listarElementos(frutas); // Saída esperada: Maçã Banana Laranja
