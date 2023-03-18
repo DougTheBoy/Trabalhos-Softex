@@ -1,0 +1,85 @@
+Html:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lugares Turísticos na Europa</title>
+</head>
+<body>
+    <main>
+        <h1 class="main-title">Lugares Turísticos na Europa</h1>
+        <div class="main-div">
+            <section>
+                <h2 class="title-paises">França</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea enim quis fugiat, neque minus minima dicta perspiciatis, assumenda repudiandae porro autem nesciunt veniam? Dolores facere excepturi illo aperiam, commodi maiores.</p>
+                <img class="imagens" src="img/frança.jpg" alt="">
+            </section>
+            <section>
+                <h2 class="title-paises">Alemanha</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nihil nesciunt, neque voluptas aperiam reprehenderit incidunt? Perspiciatis velit expedita ipsa adipisci, doloremque officiis aperiam, perferendis dolore sit nobis consequatur obcaecati!</p>
+                <img class="imagens" src="img/alemanha.jpg" alt="">
+            </section>
+            <section>
+                <h2 class="title-paises">Espanha</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis minima nam explicabo doloribus sapiente enim perferendis esse culpa rerum repudiandae harum quae magnam illum sint pariatur necessitatibus, vitae numquam?</p>
+                <img class="imagens" src="img/espanha.jpg" alt="">
+            </section>
+        </div>
+    </main>
+</body>
+</html>
+
+CSS:
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 48px;
+}
+
+.title-paises {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 48px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.imagens {
+    display: flex;
+    justify-content: flex-end;
+    max-width:300px;
+    width: auto;
+    height: auto;
+}
+
+.main-div {
+    margin: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
