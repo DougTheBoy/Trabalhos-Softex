@@ -1,0 +1,41 @@
+Para criar um Web Service que permita a comunicação segura de informações pessoais, podemos utilizar a abordagem SOAP. O SOAP (Simple Object Access Protocol) é um protocolo baseado em XML para troca de mensagens entre aplicativos.
+
+A estrutura básica de um Web Service SOAP é composta por:
+
+WSDL (Web Service Description Language) - descrição do serviço em XML, contendo informações sobre operações, tipos de dados e endpoints;
+Endpoint - local onde o serviço pode ser acessado;
+XML - formato de mensagem utilizado para troca de informações entre o cliente e o servidor.
+A comunicação ocorre da seguinte forma:
+
+O cliente faz uma requisição SOAP para o serviço, contendo a operação desejada e os parâmetros necessários em formato XML;
+O servidor recebe a requisição, verifica se a mesma é válida e processa a operação solicitada;
+O servidor retorna uma resposta SOAP para o cliente, contendo o resultado da operação em formato XML.
+Um exemplo de requisição SOAP para o serviço poderia ser:
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <exam:GetClientInfoRequest>
+         <exam:ClientID>123</exam:ClientID>
+      </exam:GetClientInfoRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Neste exemplo, o cliente solicita informações sobre o cliente com ID 123.
+
+A resposta do servidor seria algo como:
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <exam:GetClientInfoResponse>
+         <exam:Name>João da Silva</exam:Name>
+         <exam:Address>Rua A, 123</exam:Address>
+         <exam:PhoneNumber>(11) 9999-9999</exam:PhoneNumber>
+      </exam:GetClientInfoResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Neste exemplo, o servidor retorna as informações solicitadas sobre o cliente, como nome, endereço e número de telefone.
+
+Ao utilizar um Web Service SOAP, é possível garantir a segurança dos dados transmitidos, pois é possível utilizar técnicas como criptografia e autenticação para proteger a comunicação entre o cliente e o servidor.
