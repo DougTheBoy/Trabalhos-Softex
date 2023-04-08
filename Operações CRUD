@@ -3,12 +3,12 @@ Para realizar as quatro operações de CRUD (Create, Read, Update, Delete) em um
 Criar um livro:
 
 bash
-Copy code
+
 POST /livros
 Corpo da requisição:
 
 json
-Copy code
+
 {
     "nome": "O Príncipe",
     "autor": "Maquiavel",
@@ -16,26 +16,26 @@ Copy code
 }
 Resposta:
 
-Copy code
+
 201 Created
 Ou em caso de erro:
 
-Copy code
+
 400 Bad Request
 Ler um livro:
 
 bash
-Copy code
+
 GET /livros/{isbn}
 Exemplo:
 
 bash
-Copy code
+
 GET /livros/978-8573264213
 Resposta:
 
 json
-Copy code
+
 {
     "nome": "O Príncipe",
     "autor": "Maquiavel",
@@ -44,17 +44,17 @@ Copy code
 Ou em caso de erro:
 
 mathematica
-Copy code
+
 404 Not Found
 Atualizar um livro:
 
 bash
-Copy code
+
 PUT /livros/{isbn}
 Corpo da requisição:
 
 json
-Copy code
+
 {
     "nome": "O Príncipe",
     "autor": "Maquiavel",
@@ -62,31 +62,31 @@ Copy code
 }
 Resposta:
 
-Copy code
+
 200 OK
 Ou em caso de erro:
 
 mathematica
-Copy code
+
 404 Not Found
 Deletar um livro:
 
 bash
-Copy code
+
 DELETE /livros/{isbn}
 Exemplo:
 
 bash
-Copy code
+
 DELETE /livros/978-8573264213
 Resposta:
 
 css
-Copy code
+
 204 No Content
 Ou em caso de erro:
 
 mathematica
-Copy code
+
 404 Not Found
 Essas rotas podem ser implementadas em um servidor web utilizando uma linguagem de programação como Java, PHP, Python, ou outra. O servidor web seria responsável por manipular as requisições e fornecer as respostas adequadas para as operações de CRUD em livros.
