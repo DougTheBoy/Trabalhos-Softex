@@ -1,0 +1,37 @@
+const express = require('express');
+const app = express();
+
+// Obter todos os alunos
+app.get('/alunos', (req, res) => {
+  // lógica para obter todos os alunos
+  res.status(200).json({ message: 'Lista de alunos' });
+});
+
+// Obter um aluno pelo ID
+app.get('/alunos/:id', (req, res) => {
+  const alunoId = req.params.id;
+  // lógica para obter um aluno pelo ID
+  res.status(200).json({ message: `Aluno com ID ${alunoId}` });
+});
+
+// Criar um novo aluno
+app.post('/alunos', (req, res) => {
+  const novoAluno = req.body;
+  // lógica para criar um novo aluno
+  res.status(201).json({ message: 'Aluno criado com sucesso' });
+});
+
+// Atualizar um aluno existente pelo ID
+app.put('/alunos/:id', (req, res) => {
+  const alunoId = req.params.id;
+  const alunoAtualizado = req.body;
+  // lógica para atualizar um aluno pelo ID
+  res.status(200).json({ message: `Aluno com ID ${alunoId} atualizado com sucesso` });
+});
+
+// Excluir um aluno existente pelo ID
+app.delete('/alunos/:id', (req, res) => {
+  const alunoId = req.params.id;
+  // lógica para excluir um aluno pelo ID
+  res.status(200).json({ message: `Aluno com ID ${alunoId} excluído com sucesso` });
+});
