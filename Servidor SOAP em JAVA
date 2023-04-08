@@ -1,0 +1,54 @@
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.xml.ws.Endpoint;
+
+@WebService
+public class ExemploServidorSOAP {
+
+    @WebMethod
+    public String saudacao(String nome) {
+        return "Olá, " + nome + "!";
+    }
+
+    @WebMethod
+    public int soma(int a, int b) {
+        return a + b;
+    }
+
+    @WebMethod
+    public int subtracao(int a, int b) {
+        return a - b;
+    }
+
+    @WebMethod
+    public String concatenacao(String a, String b) {
+        return a + " " + b;
+    }
+
+    public static void main(String[] args) {
+        Endpoint.publish("http://localhost:8080/exemplo", new ExemploServidorSOAP());
+    }
+}
+
+Explicação do código:
+
+A anotação @WebService indica que a classe ExemploServidorSOAP é um serviço web SOAP.
+Os métodos saudacao, soma, subtracao e concatenacao são os endpoints disponibilizados pelo serviço web. Cada um deles é anotado com @WebMethod, indicando que são métodos que podem ser chamados remotamente.
+No método main, o servidor é publicado na porta 8080 com o caminho /exemplo.
+Para executar o servidor, basta compilar e executar a classe ExemploServidorSOAP. Ele estará rodando na porta 8080 e os quatro endpoints estarão disponíveis nos seguintes endereços:
+
+http://localhost:8080/exemplo/saudacao
+http://localhost:8080/exemplo/soma
+http://localhost:8080/exemplo/subtracao
+http://localhost:8080/exemplo/concatenacao
+Cada um desses endpoints pode ser chamado utilizando uma ferramenta de cliente SOAP, como o SoapUI, passando os parâmetros necessários. Por exemplo, para chamar o endpoint soma, pode-se fazer uma requisição SOAP com o seguinte corpo:
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <exam:soma>
+         <a>3</a>
+         <b>4</b>
+      </exam:soma>
+   </soapenv:Body>
+</soapenv:Envelope>
